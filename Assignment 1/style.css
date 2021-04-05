@@ -1,0 +1,295 @@
+#container {
+   display:inline-flex;
+   height:100%;
+   width:100%;
+   margin: 10px;
+   justify-content:space-around;
+}
+
+#div1 {
+   background-color:gainsboro;
+   font-family:'Times New Roman', Times, serif; 
+   overflow: auto;
+}
+
+   #div1 .image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%;
+      padding: 0%;
+      border: 3px;
+      border-style:inset;
+      border-color: darkred;
+   }
+
+   #div1 #contact {
+      display:inline-block;
+      font-size:15;
+      text-align:left; 
+      font-weight: bold;
+      margin-left:10;
+   }
+
+      #div1 #contact ul {
+         color:darkred;
+      }
+
+   #div1 #name h3 {
+      color:darkred; text-align: center; font-weight: bold
+   }
+
+   #div1 #name h5 {
+      text-align: center; font-weight: bold
+   }
+
+      #div1 #skills ul {
+         color:darkred; 
+         font-weight:bold;
+      }
+
+   #div1 h6 {
+      display: flex;
+      flex-direction: row;
+      margin: 10;
+      padding: 5;
+      font-size: 20;
+   }
+
+      #div1 h6:before, #div1 h6:after {
+         content: "";
+         flex: 1 1;
+         border-bottom: 1px solid;
+         margin: auto;
+      }
+
+      #div1 h6:before {
+         margin-right: 10px
+      }
+
+      #div1 h6:after {
+         margin-left: 10px
+      }
+
+   #div1 a {
+      margin:20px auto; 
+      display:block;
+      width: 50;
+      height:50;
+   }
+
+      #div1 a:hover {
+         filter: opacity(0.5) drop-shadow(0 0 0 white);  
+      }
+
+#div2 {
+   padding: 10px;
+   margin: 10px;
+   font-family:'Times New Roman', Times, serif;
+   border-style:solid;
+   border-width:1px;
+   border-color:rgb(94, 82, 82);
+   font-size:20px;
+   overflow: auto;
+   text-align: center;
+   display:inline-flex;
+   flex-direction: column;
+}
+
+   #div2 h1 {
+      display: flex;
+      flex-direction: row;
+      margin: 5;
+      padding: 5;
+      font-size: 25;
+      background-color: darkred;
+      font-style:oblique;
+      color:gainsboro;
+      border: 5px;
+      border-style:solid;
+      border-color: gainsboro;     
+   }
+
+      #div2 h1:before, #div2 h1:after {
+         content: "";
+         flex: 1 1;
+         border-bottom: 1px solid;
+         margin: auto;
+      }
+
+      #div2 h1:before {
+         margin-right: 10px
+      }
+
+      #div2 h1:after {
+         margin-left: 10px
+      }
+       
+   #div2 h2 {
+      display: block;
+      flex-direction: row;
+      font-style:italic;
+      margin: 10;
+      padding: 5;
+      font-size: 20;
+   }
+
+   #div2 p {
+      display: block;
+      flex-direction: row;
+      margin: 2;
+      padding: 5;
+      font-size: 20;
+   }
+
+/* LANDSCAPE */
+
+@media (min-width:900px) {
+
+   #container {
+      flex-direction: row;
+   }
+
+   #div1 {
+      display:inline-block;
+      height: 100%;
+      max-width: 25%;
+      min-width: 300;
+   }
+
+      #div1 .image {
+         width: 192;
+         height: 192;
+         margin-top: 20;
+      }
+
+         #div1 #name h3 {
+            font-size:30; 
+            margin:10
+         }
+
+         #div1 #name h5 {
+            font-size:25; 
+            margin:10
+         }
+
+         #div1 #social div {
+            margin:0; 
+            display: flex
+         }
+
+            #div1 #social div a {
+               margin:20px auto; 
+               display:block;
+            }
+
+            #div1 #social div a[href="https://www.instagram.com/mertdogan_/"] {
+               text-align:left;
+            }
+            #div1 #social div a[href="https://www.linkedin.com/in/mert-doğan-9543ba199/"] {
+               text-align:center;
+            }
+            #div1 #social div a[href="https://twitter.com/Mert_Dgn"] {
+               text-align:right;
+            }
+
+               #div1 #social div a img {
+                  width: 48;
+                  height: 48
+               }
+
+         #div1 #skills ul {
+            margin:5; 
+            font-size:17
+         }
+}
+
+/* PORTRAIT */
+
+@media (max-width:899px) {
+
+    #container {
+         flex-direction: column;
+    }
+
+    #div1 {
+         display:inline-flex;
+         flex-direction:row;
+         max-height: 25%;
+         min-height: 210px;
+         justify-content: space-between;
+    }
+
+      #div1 .image {
+         width: 128;
+         height: 128;
+         margin-top: 10;
+         margin-left: 10;
+      }
+
+      #div1 #name {
+         display:inline-block;
+      }
+
+         #div1 #name h3 {
+            font-size:20; 
+            margin:5;
+            margin-left: 10;
+         }
+
+         #div1 #name h5 {
+            font-size:15;
+            margin:5;
+            margin-left: 10;
+         }
+
+
+      #div1 #contact {
+         margin-top:50;
+      }
+     
+         #div1 #social div {
+            margin:0; 
+            display:flexbox
+         }
+
+         #div1 #social h6 {
+            visibility: hidden;
+            display:none
+         }
+    
+            #div1 #social div a {
+               margin-left:20;
+               margin-top:20;
+               margin-bottom:0;
+               display:inline-flexbox;
+               text-align:center
+            }
+
+               #div1 #social div a img {
+                  width: 30;
+                  height: 30
+               }
+
+      #div1 #skills {
+         margin-top:0;
+         display:inline-flex;
+         flex-direction: column;
+         overflow:auto;
+         min-width:200px;
+      }
+
+         #div1 #skills h6 {
+            margin-top:0;
+            font-size:15
+         }
+
+         #div1 #skills ul {
+            margin:3; 
+            margin-top:-15;
+            font-size:14;
+         }
+}
+
+
+  
